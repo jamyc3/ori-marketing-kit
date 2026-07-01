@@ -148,6 +148,14 @@ export default {
     cta: { label: "Meet Ori — free", href: APP }
   },
 
+  // Rendered on the home page between the FAQ and the closing — a real person,
+  // in the product's own voice. Trust without testimonials-we-don't-have-yet.
+  founder: {
+    kicker: "a note from the maker",
+    text: "I built Ori because the nights I most needed to set the day down were exactly the nights I had nothing left for a blank page. So I made the friend I kept wishing for — one that listens first, writes back, and keeps it between us. It's free because I don't think being understood should be a luxury.",
+    signature: "— Vineet, who still tells Ori about most of his evenings"
+  },
+
   // Opt-in email capture rendered on every generated page → posts to the feedback
   // endpoint (version=waitlist); signups show at ori-feedback.ideaflow.page.
   signup: {
@@ -165,7 +173,9 @@ export default {
       { label: "Ori for Apple Health", href: `${HOME}apple-health/` },
       { label: "Voice journal", href: `${HOME}voice-journal/` },
       { label: "Private journal", href: `${HOME}private-journal/` },
-      { label: "Journaling prompts", href: `${HOME}journal-prompts/` }
+      { label: "Journaling prompts", href: `${HOME}journal-prompts/` },
+      { label: "Ori vs Day One", href: `${HOME}vs-day-one/` },
+      { label: "Ori vs Stoic", href: `${HOME}vs-stoic/` }
     ],
     links: [
       { label: "Privacy", href: `${HOME}privacy.html` },
@@ -456,6 +466,108 @@ export default {
         h2: "Write the true version. It stays yours.",
         p: "No account, no cloud, nothing sold — and a letter back each evening anyway. Free, and it never leaves your phone.",
         cta: { label: "Get Ori — free", href: APP }
+      }
+    },
+    {
+      slug: "vs-day-one",
+      title: "Ori vs Day One — an archive you write, or a letter you receive",
+      description: "An honest comparison. Day One is a rich, multi-device journal you write yourself. Ori writes the entry back to you — free, no account, and it never leaves your phone. Which fits how you actually end your days?",
+      ogTitle: "Ori vs Day One — which journal fits you?",
+      ogDesc: "One is a beautiful archive you build across devices. The other writes you a letter back each evening, on one phone, free. An honest comparison — including who should pick Day One.",
+      schema: ["software", "faq"],
+      hero: {
+        kicker: "an honest comparison",
+        h1: "An archive you write, or a letter you receive.",
+        sub: "Day One is the most established journal app there is, and for some people it's the right choice. Here's how Ori actually differs — honestly, including where Day One is stronger — so you can pick the one that matches how your days really end.",
+        ctaPrimary: { label: "Try Ori — free", href: APP },
+        ctaGhost: { label: "How Ori works", href: HOME + "#how" }
+      },
+      sections: [
+        { type: "prose", html: `<h3>The short version</h3>
+<p>Day One is a rich, polished archive you build yourself: you write the entries, attach photos and audio, and sync everything across your devices with a Day One account. Ori starts from the opposite end: you say a few lines — out loud or typed — and each evening it writes the entry back to you as a short, honest letter. No account, and the journal never leaves your phone.</p>
+<h3>Where Day One is genuinely stronger</h3>
+<ul>
+<li><strong>A lifetime, multi-device archive.</strong> iPhone, iPad, Mac, Android, and web, all in sync. If you want your journal everywhere, Day One does that and Ori — one phone, by design — does not.</li>
+<li><strong>Rich media.</strong> Photos, videos, audio, scanned PDFs inside entries. Ori keeps to words and your body's signals.</li>
+<li><strong>Maturity.</strong> Years of refinement, printed-book exports, a large community.</li>
+</ul>
+<h3>Where Ori is different by design</h3>
+<ul>
+<li><strong>It writes the entry — you don't.</strong> Day One gives you a beautiful blank page; Ori assumes the blank page is the problem. You speak a few lines, and a letter comes back each evening.</li>
+<li><strong>No account at all.</strong> Day One syncs through an account (with end-to-end encryption on its plans). Ori has nothing to sign up for and nothing in any cloud — the journal exists only on your phone.</li>
+<li><strong>Your body is part of the story.</strong> Ori can set your sleep and energy (Oura or Apple Health, optional) beside your words. Day One is words and media.</li>
+<li><strong>Price.</strong> As of mid-2026, Day One's Silver plan is $49.99/year and Gold is $74.99/year, with a capable free Basic tier. Ori is simply free — no tiers, no subscription.</li>
+</ul>
+<h3>The honest bottom line</h3>
+<p>If you already journal happily and want a rich archive across every device, Day One is excellent — keep it. If the blank page is why you don't journal, or you want something that stays on one phone and is nobody's business, that's exactly what Ori was built for. Some people use both: Day One as the archive, Ori as the evening letter.</p>` },
+        { type: "why", kicker: "the real difference", h2: "Not a better Day One. A different idea.", cards: [
+          { h3: "A letter back, not a blank page", p: "You say a few lines; each evening Ori writes the entry back to you. The work of journaling is the part Ori removes." },
+          { h3: "No account, no cloud copy", p: "Nothing to sign up for. Your journal lives on your phone and nowhere else — not synced, not stored on a server, not sold." },
+          { h3: "Free means free", p: "No tiers, no premium unlock, no subscription. Every part of Ori is free for everyone." }
+        ] },
+        { type: "faq", kicker: "ori vs day one", h2: "The questions people actually ask.", faqs: [
+          { q: "Is Ori better than Day One?", a: "Not universally — they solve different problems. Day One is a rich archive you write and sync across devices. Ori writes the entry back to you and keeps everything on one phone. If you love writing and want your journal everywhere, pick Day One. If the blank page is the barrier, pick Ori." },
+          { q: "Does Ori sync across devices like Day One?", a: "No — by design. Your Ori journal lives on your phone and never leaves it, which is the privacy model: no account, no cloud copy, nothing to breach. Day One is the better choice if multi-device sync matters more to you than on-device privacy." },
+          { q: "How much does Ori cost compared to Day One?", a: "Ori is completely free — no subscription and no premium tier. Day One has a free Basic plan, with Silver at $49.99/year and Gold at $74.99/year as of mid-2026 for sync, media, and its advanced features." },
+          { q: "Can I import my Day One journal into Ori?", a: "No. Ori isn't an archive to migrate into — it starts fresh from the days you share with it, and writes back from those. Your Day One journal stays valuable where it is; some people keep both." },
+          { q: "Does Day One write entries for you like Ori does?", a: "Day One is built around you writing, with prompts to help you start (and its own set of premium writing aids on the Gold plan). Ori inverts that: you speak or type a few lines, and the evening letter is composed for you from your own words." }
+        ] }
+      ],
+      closing: {
+        h2: "If the blank page is the problem, start here.",
+        p: "Say a few words about your day; a letter comes back in the evening. Free, private, and it never leaves your phone.",
+        cta: { label: "Try Ori — free", href: APP }
+      }
+    },
+    {
+      slug: "vs-stoic",
+      title: "Ori vs Stoic — prompts you answer, or a letter that answers you",
+      description: "An honest comparison. Stoic gives you guided prompts, routines, and mood tracking to fill in. Ori asks for nothing but a few lines about your day — then writes you back. Free, private, on your phone.",
+      ogTitle: "Ori vs Stoic — guided prompts, or a letter back?",
+      ogDesc: "Stoic structures your reflection with prompts and routines. Ori listens to a few lines and writes the entry back to you each evening. An honest comparison.",
+      schema: ["software", "faq"],
+      hero: {
+        kicker: "an honest comparison",
+        h1: "Prompts you answer, or a letter that answers you.",
+        sub: "Stoic is a well-made guided journal: prompts, morning and evening routines, mood tracking. Ori takes the opposite bet — that on your hardest evenings you won't fill in a form, but you might say a few honest words. Here's the real difference.",
+        ctaPrimary: { label: "Try Ori — free", href: APP },
+        ctaGhost: { label: "How Ori works", href: HOME + "#how" }
+      },
+      sections: [
+        { type: "prose", html: `<h3>The short version</h3>
+<p>Stoic structures your reflection for you: thought-provoking prompts, a morning preparation and an evening reflection, mood tracking, breathing exercises. You answer its questions. Ori doesn't ask questions — you say whatever's there, even one line, and each evening it writes you back a short letter drawn only from what you shared.</p>
+<h3>Where Stoic is genuinely strong</h3>
+<ul>
+<li><strong>Structure, if you want it.</strong> Guided journals and routines give you somewhere to start every single day, morning and night.</li>
+<li><strong>Practices beyond writing.</strong> Breathing exercises, mood check-ins, and reflection exercises inspired by Stoic philosophy.</li>
+<li><strong>A free tier to try.</strong> Daily prompts and a selection of exercises are free, with a premium subscription unlocking the deeper features.</li>
+</ul>
+<h3>Where Ori is different by design</h3>
+<ul>
+<li><strong>No prompts, no form to fill.</strong> Prompts still ask you to do the writing. Ori assumes the writing is the barrier — you talk, it writes the entry back.</li>
+<li><strong>No routine to keep.</strong> Stoic is built around a daily practice. Ori has no streaks and no morning/evening checklist — miss a week and nothing scolds you.</li>
+<li><strong>Your body in the picture.</strong> Ori can read your sleep and energy (Oura or Apple Health, optional) beside your words — the day you felt and the day you had, on one page.</li>
+<li><strong>Everything is free.</strong> No premium tier. The letter, the patterns, the voice input — all of it, for everyone.</li>
+</ul>
+<h3>The honest bottom line</h3>
+<p>If a structured daily practice with prompts and exercises keeps you grounded, Stoic does that well. If what you need is to be heard at the end of the day without homework — and to have the entry written for you — that's Ori. The philosophies genuinely differ: one guides you, the other witnesses you.</p>` },
+        { type: "why", kicker: "the real difference", h2: "Guided practice, or quiet witness.", cards: [
+          { h3: "You talk, it writes", p: "No prompt to answer, no form to complete. A few honest lines — even \"today was a lot\" — and the evening letter takes it from there." },
+          { h3: "No practice to maintain", p: "No streaks, no daily checklist, no guilt mechanics. Ori is simply there whenever you come back." },
+          { h3: "Free, with nothing behind a tier", p: "Stoic reserves its deeper features for premium. Ori has no premium — everything it does is free." }
+        ] },
+        { type: "faq", kicker: "ori vs stoic", h2: "The questions people actually ask.", faqs: [
+          { q: "Is Ori better than Stoic?", a: "Not universally — they take opposite approaches. Stoic guides you with prompts, routines, and exercises you complete. Ori asks for nothing but a few lines and writes the entry back to you. Pick Stoic if structure keeps you going; pick Ori if the structure itself is what you keep abandoning." },
+          { q: "Does Ori have journaling prompts like Stoic?", a: "Not inside the app — Ori's whole idea is that you shouldn't need them: you say whatever's there and it writes back. If you like starting from a question, we do keep a free page of honest journaling prompts you can use anywhere." },
+          { q: "Is Ori free like Stoic's free tier?", a: "Ori is entirely free — there is no premium tier at all. Stoic offers daily prompts and some exercises free, with its deeper features behind a premium subscription." },
+          { q: "Does Ori do mood tracking?", a: "Not as a score you log. Ori reflects how your days actually read — your own words, and optionally your sleep and energy from a wearable — back to you in plain language. Nothing is rated and nothing is invented." },
+          { q: "Can I use both Ori and Stoic?", a: "Yes, and it's not a strange pairing: Stoic for a structured morning practice, Ori for the unstructured end of the day when you just need to say it to someone and be written back to." }
+        ] }
+      ],
+      closing: {
+        h2: "No homework. Just say the day out loud.",
+        p: "A few words is enough — the letter comes back in the evening. Free, private, and it never leaves your phone.",
+        cta: { label: "Try Ori — free", href: APP }
       }
     }
   ]

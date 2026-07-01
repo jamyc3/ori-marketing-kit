@@ -48,7 +48,8 @@ async function main() {
     cfg.showcase?.lede || "", ...cfg.friend.cards.map((c) => `${c.h3} ${c.p}`),
     ...cfg.how.beats.map((b) => `${b.h3} ${b.p}`), ...cfg.how.pillars.map((p) => `${p.h3} ${p.p}`),
     ...cfg.faq.faqs.map((f) => `${f.q} ${f.a}`),
-    `${cfg.closing.h2} ${cfg.closing.p}`, cfg.meta.description, cfg.meta.ogDesc || "",
+    `${cfg.closing.h2} ${cfg.closing.p}`, cfg.founder ? `${cfg.founder.text} ${cfg.founder.signature}` : "",
+    cfg.meta.description, cfg.meta.ogDesc || "",
     cfg.schemaDescription || "", cfg.aso?.description || "", cfg.aso?.promo || "",
     ...flattenPages(pages)
   ];
