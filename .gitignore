@@ -1,0 +1,4 @@
+out/
+_deploy_stage/
+.indexnow-key.txt
+.analytics.env
