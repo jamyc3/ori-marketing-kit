@@ -11,7 +11,7 @@ consistent, and all held to an **honesty guard** that fails the build on hype.
 It's why every product after the first is ~30 minutes of config instead of days
 of hand-written HTML.
 
-**Live example:** [ori-app.ideaflow.page](https://ori-app.ideaflow.page) is
+**Live example:** [orijournal.app](https://orijournal.app) is
 generated entirely by this kit (`products/ori.config.mjs`).
 
 ## Quick start
